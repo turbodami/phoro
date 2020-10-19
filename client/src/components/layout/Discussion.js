@@ -2,7 +2,7 @@ import React from "react";
 import { Avatar } from "@material-ui/core";
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
-import "./css/Discussion.css";
+import "../css/Discussion.css";
 
 function Discussion({ source, text, avatar, link, image, timestamp }) {
   return (

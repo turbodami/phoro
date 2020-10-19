@@ -1,6 +1,6 @@
 import React from "react";
 import Discussion from "./Discussion";
-import "./css/Feed.css";
+import "../css/Feed.css";
 
 function Feed() {
   return (
