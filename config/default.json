@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://tolarianwiz:D10c4n3P0rC0@phorodev.wblzg.mongodb.net/phoro?retryWrites=true&w=majority",
+  "jwtSecret": "ragazzoanimalesco"
+}

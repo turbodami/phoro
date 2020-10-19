@@ -1,0 +1,14 @@
+.sidebar {
+    border-right: 1px solid var(--phoro-background);
+    flex: 0.22;
+    /* min-width: 250px; */
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.sidebar__phoroIcon {
+    font-size: 30px !important;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
