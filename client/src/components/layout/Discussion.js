@@ -19,7 +19,7 @@ function Discussion({ source, text, avatar, link, image, timestamp }) {
             <p>{text}</p>
           </div>
         </div>
-        <img src={image} />
+        <img src={image} alt={source} />
         <div className='post__footer'>
           <ChatBubbleOutlineIcon fontSize='medium' />
           <FavoriteBorderIcon fontSize='medium' />

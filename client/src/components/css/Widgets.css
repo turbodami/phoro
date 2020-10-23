@@ -1,35 +1,62 @@
 .widgets {
-    flex: 0.35;
+  flex: 0.35;
 }
 
 .widgets__input {
-    display: flex;
-    align-items: center;
-    background-color: var(--phoro-background);
-    padding: 10px;
-    border-radius: 20px;
-    margin-top: 10px;
-    margin-left: 20px;
+  display: flex;
+  align-items: center;
+  background-color: var(--phoro-background);
+  padding: 10px;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-left: 20px;
 }
 
 .widgets__input > input {
-    border: none;
-    background-color: var(--phoro-background);
+  border: none;
+  background-color: var(--phoro-background);
 }
 
 .widgets__searchIcon {
-    color: gray;
+  color: gray;
 }
 
 .widgets__widgetContainer {
-    margin-top: 15px;
-    margin-left: 20px;
-    padding: 20px;
-    background-color: #f5f8fa;
-    border-radius: 20px;
+  margin-top: 15px;
+  margin-left: 20px;
+  padding: 20px;
+  background-color: #f5f8fa;
+  border-radius: 20px;
 }
 
 .widgets__widgetContainer > h2 {
-    font-size: 18px;
-    font-weight: 800;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.widgets__publicButtons {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: -webkit-fill-available;
+  margin-top: 15px;
+  padding: 15px;
+  color: white;
+  background-color: var(--phoro-color);
+  border-radius: 20px;
+  border: 0px;
+  text-decoration: none;
+}
+
+.widgets__publicButtons:hover {
+  background-color: rgb(26, 145, 218);
+  border-radius: 30px;
+  transition: color 100ms ease-out;
+  text-decoration: none;
+}
+
+.widgets__publicContainer {
+  margin-top: 15px;
+  margin-left: 20px;
+  padding: 15px;
 }
