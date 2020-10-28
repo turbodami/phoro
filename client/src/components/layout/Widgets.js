@@ -1,17 +1,20 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { logout } from "../../actions/auth";
 import SearchIcon from "@material-ui/icons/Search";
 import "../css/Widgets.css";
 
-function Widgets() {
-  const isAuthenticated = false;
-  const loggedWidgets = (
+function Widgets({ auth: { isAuthenticated, loading }, logout }) {
+  const authWidgets = (
     <div className='widgets__widgetContainer'>
+      <button onClick={logout}>Logout</button>
       <h2>Trends for you</h2>
     </div>
   );
 
-  const publicWidgets = (
+  const guestWidgets = (
     <div className='widgets__publicContainer'>
       <h3>New to Phoro?</h3>
       <p>Sign up now to access our discussion board!</p>
@@ -24,15 +27,25 @@ function Widgets() {
       </Link>
     </div>
   );
+
   return (
     <div className='widgets'>
       <div className='widgets__input'>
         <SearchIcon className='widgets__searchIcon' />
         <input placeholder='Search Phoro...' type='text' />
       </div>
-      {isAuthenticated ? loggedWidgets : publicWidgets}
+      {!loading && (
+        <Fragment>{isAuthenticated ? authWidgets : guestWidgets}</Fragment>
+      )}
     </div>
   );
 }
 
-export default Widgets;
+Widgets.propTypes = {
+  logout: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+};
+
+const mapStateToProps = (state) => ({ auth: state.auth });
+
+export default connect(mapStateToProps, { logout })(Widgets);
